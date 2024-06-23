@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cmazzu - Home</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+
+    <style>
+        /* Stili per lo sfondo */
+        .background-container {
+            background-image: url('background.png'); /* Sostituisci con il percorso dell'immagine di sfondo desiderata */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        /* Stili per l'overlay sfocato */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Altri stili per il contenuto della pagina */
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+            color: white; /* Seleziona il colore del testo appropriato per il tuo sfondo */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="top-menu">
+            <h1>Cmazzu utility - Home</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="siti.html">Siti</a></li>
+                    <li><a href="programmi.html">Programmi</a></li>
+                    <li><button id="loginButton">Log In</button></li> <!-- Aggiunto il pulsante per il login -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="background-container">
+        <div class="overlay"></div> <!-- Elemento aggiuntivo per l'overlay sfocato -->
+        <div class="content">
+            <main>
+                <section>
+                    <h2>HOME</h2>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>Cmazzu - Mazzucchi Christian</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modale per il login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+                <br> <!-- Line break aggiunto qui -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <br> <!-- Line break aggiunto qui -->
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
